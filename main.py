@@ -1,3 +1,5 @@
+import logging
+
 from git import Repo, Git, Tree
 
 
@@ -12,12 +14,12 @@ def run():
             continue
 
         loginfo = g.log('-1', '--pretty="%ct"', entry.path)
-        print(f'File: {entry.path} was last updated on: {loginfo}')
+        logging.debug(f'File: {entry.path} was last updated on: {loginfo}')
         all_files.append([entry.path, loginfo])
 
-    print(all_files[0])
     all_files = sorted(all_files, key=lambda x: x[1], reverse=True)
-    print(all_files[0])
+    print(all_files)
+    return all_files
 
 
 if __name__ == "__main__":
