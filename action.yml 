@@ -9,8 +9,6 @@ description: 'Find oldest files in Git repo'
 #  time: # id of output
 #    description: 'The time we greeted you'
 runs:
-  env:
-    GITHUB_WORKSPACE: '/'
   using: 'docker'
   image: 'Dockerfile'
 
