@@ -1,10 +1,11 @@
 import logging
+import os
 
 from git import Repo, Git, Tree
 
 
 def run():
-    folder_path = '/Users/shlomihome/workspace/slots_tracker_server'
+    folder_path = os.environ['GITHUB_WORKSPACE']
     repo = Repo(folder_path)
     g = Git(folder_path)
 
