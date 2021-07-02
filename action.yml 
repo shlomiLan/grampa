@@ -11,6 +11,7 @@ description: 'Find oldest files in Git repo'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
+    value: 'new test'
 runs:
   using: 'docker'
   image: 'Dockerfile'
