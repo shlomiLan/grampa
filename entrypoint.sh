@@ -2,4 +2,4 @@
 
 cd /
 
-python -m main
+echo "::set-output name=report::python -m main"
