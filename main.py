@@ -23,11 +23,7 @@ def run():
 
     all_files = sorted(all_files, key=lambda x: x[1], reverse=True)
 
-    # print(tabulate(all_files, headers=["File name", "Last changed"], tablefmt="grid"))
-    print('-------')
-    # print(tabulate(all_files[:10], headers=["File name", "Last changed"], tablefmt="grid"))
-    # print('-------')
-    # print(tabulate(all_files, headers=["File name", "Last changed"]))
+    print(tabulate(all_files[:10], headers=["File name", "Last changed"], tablefmt="grid"))
 
 
 if __name__ == "__main__":
