@@ -5,6 +5,8 @@ import time
 from git import Repo, Git, Tree
 from tabulate import tabulate
 
+MAX_RESULTS = 100
+
 
 def run():
     folder_path = os.environ['GITHUB_WORKSPACE']
@@ -23,7 +25,7 @@ def run():
 
     all_files = sorted(all_files, key=lambda x: x[1], reverse=True)
 
-    print(tabulate(all_files[:10], headers=["File name", "Last changed"], tablefmt="grid"))
+    print(tabulate(all_files[:MAX_RESULTS], headers=["File name", "Last changed"], tablefmt="grid"))
 
 
 if __name__ == "__main__":
