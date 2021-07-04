@@ -1,17 +1,5 @@
 name: 'grampa'
 description: 'Find oldest files in Git repo'
-##inputs:
-##  who-to-greet:  # id of input
-##    description: 'Who to greet'
-##    required: true
-##    default: 'World'
-#outputs:
-#  report:
-#    description: 'The time we greeted you'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
-    value: 'new test'
 runs:
   using: 'docker'
   image: 'Dockerfile'
