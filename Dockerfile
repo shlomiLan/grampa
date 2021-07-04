@@ -5,7 +5,6 @@ RUN apk --no-cache add git
 
 COPY . .
 
-RUN python3 -m venv venv
-RUN source ./venv/bin/activate && pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 ENTRYPOINT ["/entrypoint.sh"]
