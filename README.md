@@ -12,6 +12,8 @@ jobs:
     name: Find oldest modified files
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: shlomiLan/grampa@v2
         id: grampa
 ```
