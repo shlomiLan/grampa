@@ -23,7 +23,7 @@ def run():
         logging.debug(f'File: {entry.path} was last updated on: {loginfo_as_date}')
         all_files.append([entry.path, loginfo_as_date])
 
-    all_files = sorted(all_files, key=lambda x: x[1], reverse=True)
+    all_files = sorted(all_files, key=lambda x: x[1])
 
     print(tabulate(all_files[:MAX_RESULTS], headers=["File name", "Last changed"], tablefmt="grid"))
 
